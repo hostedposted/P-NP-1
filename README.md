@@ -1,3 +1,9 @@
+<h1 align="center"><a href="https://github.com/ProdigyPNP/ProdigyMathGameHacking/blob/master/.github/ANNOUNCEMENT.md">Hacks are being shut down. Thanks for everything.</a></h1>
+
+<h2 align="center"><a href="https://discord.gg/2qzTbdXSg9">Our Discord server: discord.gg/2qzTbdXSg9</a></h2>
+
+
+
 # P-NP Patcher
 P-NP modifies and serves Prodigy's game files.
 <br>
@@ -6,110 +12,28 @@ P-NP modifies and serves Prodigy's game files.
 
 # Quickstart
 
-## Windows Quickstart
-
-1. Install [Node.js with npm](https://nodejs.org) if you don't have it already.
-2. Install [git](https://git-scm.com) if you don't have it already.
-3. Open **Windows PowerShell**.
-4. Copy and paste the code snippet below to automatically run P-NP.
-
+## Shell Script
 ```sh
 git clone https://github.com/ProdigyPNP/P-NP.git
 cd P-NP
-npm install
-npm start
-```
-<br>
-
-
-
-## MacOS Quickstart
-
-1. Install [Node.js with npm](https://nodejs.org) if you don't have it already.
-2. Install [git](https://git-scm.com) if you don't have it already.
-3. Open **iTerm**.
-4. Copy and paste the code snippet below to automatically run P-NP.
-
-```sh
-git clone https://github.com/ProdigyPNP/P-NP.git
-cd P-NP
-npm install
-npm start
-```
-<br>
-
-
-
-## Linux Quickstart
-
-1. Install [Node.js with npm](https://nodejs.org) if you don't have it already.
-2. Install [git](https://git-scm.com) if you don't have it already.
-3. Open **Terminal**.
-4. Copy and paste the code snippet below to automatically run P-NP.
-
-```sh
-git clone https://github.com/ProdigyPNP/P-NP
-cd P-NP
-npm install
+pnpm install
+pnpm build
 node dist
 ```
+
+## Dependencies
+- [Node.js](https://nodejs.org/)
+  - Node.js is the JavaScript runtime that we use
+  - P-NP needs Node.js **v16 or above** to run.
+- [git](https://git-scm.com/)
+  - It's technically possible to run P-NP without git, however git allows easy updating through `git pull`, and lots of other functionality.
+  - Using wget: ```wget https://github.com/ProdigyPNP/P-NP/archive/refs/heads/master.zip && unzip master.zip && rm master.zip && cd master && pnpm install && pnpm build && node dist```
+- [pnpm](https://pnpm.io/)
+  - It's the package manager we here at ProdigyPNP use. It's much better than the normal npm for a variety of reasons.
+  - Technically possible to use npm/yarn instead of pnpm for P-NP, but not reccomended.
+
 <br><br>
 
-
-
-# Build Binaries
-
-## Build Binaries on Windows
-
-1. Install [Node.js with npm](https://nodejs.org) if you don't have it already.
-2. Install [git](https://git-scm.com) if you don't have it already.
-3. Open **Windows PowerShell**.
-4. Copy and paste the code snippet below to automatically build P-NP's binaries.
-
-```sh
-git clone https://github.com/ProdigyPNP/P-NP.git
-cd P-NP
-npm install
-npm run build
-npm run create-exes
-```
-<br>
-
-
-
-## Build Binaries on MacOS
-
-1. Install [Node.js with npm](https://nodejs.org) if you don't have it already.
-2. Install [git](https://git-scm.com) if you don't have it already.
-3. Open **iTerm**.
-4. Copy and paste the code snippet below to automatically build P-NP's binaries.
-
-```sh
-git clone https://github.com/ProdigyPNP/P-NP.git
-cd P-NP
-npm install
-npm run build
-npm run create-exes
-```
-<br>
-
-
-
-## Build Binaries on Linux
-
-1. Install [Node.js with npm](https://nodejs.org) if you don't have it already.
-2. Install [git](https://git-scm.com) if you don't have it already.
-3. Open **Terminal**.
-4. Copy and paste the code snippet below to automatically build P-NP's binaries.
-
-```sh
-git clone https://github.com/ProdigyPNP/P-NP
-cd P-NP
-npm install
-npm run build
-npm run create-exes
-```
-<br><br>
 
 # Repl
 
@@ -126,50 +50,36 @@ Repl is a bit wacky, since it uses a very old version of Node.js. This makes P-N
 
 ```sh
 node -v
-npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+npm i --save-dev node@16
+npm config set prefix=$(pwd)/node_modules/node
+export PATH=$(pwd)/node_modules/node/bin:$PATH
 node -v
-npm install
 
 ```
 
 <br><br>
 
-# npm package
+# Node.js Package
 
 P-NP is available on npmjs at https://npmjs.com/package/p-np-patcher.
 
-### Installing P-NP
-Shell
+## Install
 ```shell
-npm install p-np-patcher
-npm install
-npm update
+pnpm install p-np-patcher
 ```
 
-<br>
-
-### Uninstalling P-NP
-Shell
+## Uninstall
 ```shell
-npm uninstall p-np-patcher
-npm install
-npm update
+pnpm remove p-np-patcher
 ```
 
-<br>
-
-### Import in TypeScript
-TypeScript
-```typescript
+### Import
+P-NP supports ES Modules/TypeScript, and not CommonJS.
+```es6
 import PNP from "p-np-patcher";
 ```
 
 <br>
 
-### Import in JavaScript
-JavaScript
-```javascript
-const PNP = require("p-np-patcher");
-```
 
 <br>
